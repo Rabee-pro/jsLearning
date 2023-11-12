@@ -444,3 +444,25 @@
 
 
                                                                            // Compare Date
+ let btn = document.getElementById("check");
+ btn.addEventListener("click", ()=>{
+    let date1 = document.getElementById("date-1").value;
+    let date2 = document.getElementById("date-2").value;
+    console.log(date1, date2);
+
+    if(date1.length == 0 || date2.length == 0){
+      result.innerHTML ="<span>please enter valid dates</span>"
+    }
+
+    else{
+      if(date1>date2){
+         result.innerHTML = "Date 1 is <b>Greater</b> than Date2"
+      }
+      else if(date1<date2){
+         result.innerHTML = "Date 1 is <b>Smaller</b> than Date2"
+      }
+      else if(date1 == date2){
+         result.innerHTML = "Date 1 is <b>Equals</b> to Date2"
+      }
+    }
+ })
